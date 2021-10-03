@@ -26,10 +26,8 @@ Please follow the below guidelines while contributing to this project:
 
 1. Fork the repository and clone it to your local setup by using the command `git clone <repo link>`
 2. Create an upstream remote and sync your local copy before your branch. See detailed instructions [here](https://help.github.com/articles/syncing-a-fork)
-3. Run the following command in the root directory of the project `npm install`.
-4. Run the command `npm start`. The website will be live on [localhost:3000](https://localhost:3000)
-5. Create separate branches for each separate piece of work.
-6. Do the work and commit changes with good commit messages.
-7. Once you are confident in your work, create a pull request to the `main` branch of the upstream repository with proper descriptions explaining what you did and wait until we review it.
+3. Create separate branches for each separate piece of work.
+4. Do the work and commit changes with good commit messages.
+5. Once you are confident in your work, create a pull request to the `main` branch of the upstream repository with proper descriptions explaining what you did and wait until we review it.
 
 </br>
