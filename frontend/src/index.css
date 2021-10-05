@@ -213,7 +213,7 @@ Hero Styles
     display: block;
     justify-self: center;
   }
-  .phone-img {
+  .app-img {
     width: 12rem;
   }
 }
@@ -231,7 +231,7 @@ Hero Styles
   .hero-images {
     align-self: end;
   }
-  .phone-img {
+  .app-img {
     width: 15rem;
   }
 }
@@ -239,7 +239,7 @@ Hero Styles
   .hero-center {
     padding-bottom: 20vh;
   }
-  .phone-img {
+  .app-img {
     width: 17rem;
   }
 }
