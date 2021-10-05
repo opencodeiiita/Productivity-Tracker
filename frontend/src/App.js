@@ -1,29 +1,22 @@
 import React from 'react';
-import Hero from './Hero';
-import Chart2 from './Chart2';
-import SignUp from './SignUp';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Navbar from './component/Navbar';
+import Home from './pages/home';
+import Contact from './pages/contact';
+import Login from './pages/login';
+import Dashboard from './pages/dashboard';
 
 function App() {
   return (
-    <>
-      <Hero />
-      <div
-        style={{
-          textAlign: 'center',
-          alignItems: 'center',
-          alignContent: 'center',
-          justifyContent: 'center',
-          maxWidth: '60%',
-          maxHeight: '100%',
-          marginLeft: '20%',
-          paddingBottom: '10vh',
-        }}
-      >
-        <Chart2 />
-      </div>
-      <SignUp />
-    </>
+    <Router>
+      <Navbar />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/dashboard" component={Dashboard} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/login" component={Login} />
+      </Switch>
+    </Router>
   );
 }
-
 export default App;
