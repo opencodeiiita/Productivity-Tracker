@@ -1,18 +1,26 @@
-import {
-  makeStyles,
-  Typography,
-} from "@material-ui/core";
-const useStyles = makeStyles((theme) => ({
-  homePage: {
-    height: "81.8vh"
-  }
-}));
-function Home() {
-  const classes = useStyles();
+import React from 'react';
+import Hero from '../component/Home Components/Hero';
+import Chart2 from '../component/Home Components/Chart2';
+
+function home() {
   return (
-    <div className={classes.homePage}>
-      <Typography>This is the homepage</Typography>
-    </div>
+    <>
+      <Hero />
+      <div
+        style={{
+          textAlign: 'center',
+          alignItems: 'center',
+          alignContent: 'center',
+          justifyContent: 'center',
+          maxWidth: '60%',
+          maxHeight: '100%',
+          marginLeft: '20%',
+          paddingBottom: '10vh',
+        }}
+      >
+        <Chart2 />
+      </div>
+    </>
   );
 }
-export default Home;
+export default home;
