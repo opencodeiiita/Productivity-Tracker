@@ -17,7 +17,7 @@ const Hero = () => {
             how much time a user spends on which app/website and at the end of the day a graph will be
             displayed based on the time recorded for each activity.
           </p>
-          <Button variant="contained" style={{ backgroundColor: 'purplered' }}>
+          <Button variant="contained" style={{ backgroundColor: 'red' }}>
             Sign Up!
           </Button>
         </article>
