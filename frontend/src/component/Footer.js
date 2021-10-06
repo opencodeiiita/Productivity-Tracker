@@ -21,10 +21,12 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         justifyItems: "flex-start"
     },
+    
     logo: {
         flexGrow: "1",
         cursor: "pointer",
     },
+    
     link: {
         textDecoration: "none",
         color: "white",
