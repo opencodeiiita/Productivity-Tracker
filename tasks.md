@@ -3,4 +3,7 @@
 - untrulynoxiusmj
 - thelavenderhue
 - Ms-Error
+- Laalasa
+- devmrfitz
+- srishtayy
 - karankc23
