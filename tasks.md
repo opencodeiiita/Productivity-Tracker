@@ -6,3 +6,5 @@
 - Laalasa
 - devmrfitz
 - srishtayy
+- karankc23
+- Tanushree-coder
