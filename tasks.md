@@ -6,6 +6,7 @@
 - Laalasa
 - devmrfitz
 - srishtayy
+- Puja-Saraf
 - karankc23
 - Tanushree-coder
 - diyawaghmare
@@ -13,3 +14,8 @@
 - krypton001
 - raghavgoel25
 - hotblooded058
+- kaneki-ken260
+- deep-ika
+- Aneesh02
+- aashitachouhan
+- medhatiwari
