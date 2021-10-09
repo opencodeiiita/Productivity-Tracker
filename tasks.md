@@ -13,6 +13,7 @@
 - Shubhi2002
 - krypton001
 - raghavgoel25
+- D-Big-B
 - rahulsingh-20
 - Aman-IIITA
 - vemulapandu
