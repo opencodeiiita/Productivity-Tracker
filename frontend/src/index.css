@@ -192,6 +192,7 @@ Hero Styles
   text-transform: none;
   max-width: 500px;
   margin-bottom: 2rem;
+  padding-top: 0.5em;
 }
 .hero-info p {
   max-width: 35em;
