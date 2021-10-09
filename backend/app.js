@@ -4,13 +4,14 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const mongoose = require('mongoose');
-
+require('./models/user');
 var indexRouter = require('./routes/index');
 
 var app = express();
 
-require('./models/user');
-mongoose.model('User');
+mongoose.connect('mongodb://localhost:27017/pt', { useNewUrlParser: true, useUnifiedTopology: true });
+
+const User = mongoose.model('User');
 
 app.use(logger('dev'));
 app.use(express.json());
