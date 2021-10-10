@@ -7,19 +7,15 @@ router.get('/google', passport.authenticate('google',{
     scope:['profile', 'email']
 }));
 
-
-// auth logout
-
-router.get('/logout', (req, res)=>{
-    //handle with passport
-    res.send('logging out');
-})
-
-
-//callback route for google to redirect to
-router.get('/google/callback', passport.authenticate('google',{failureRedirect:'/auth/fail'}), (req, res)=>{
-         res.send('user is loged in');
+router.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: 'http://localhost:3000/login' }), (req, res)=> {
+    res.json({'Gid': req.user.gid, 
+              'Email':req.user.email,
+              'Name':req.user.name,
+              'PhotoUrl':req.user.photoUrl
+  })
 });
+
+
 
 
 module.exports = router;

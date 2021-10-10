@@ -19,7 +19,7 @@ function Login() {
           image={GoogleIcon}
           sx={{ width: 24, marginRight: 1 }}
         />
-        <Typography variant='string'> <a href="/auth/google">Sign In With Google</a> </Typography>
+        <Typography variant='string'> <a href="http://localhost:5000/auth/google">Sign In With Google</a> </Typography>
       </Button>
     </Container>
   );
