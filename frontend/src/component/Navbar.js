@@ -49,7 +49,7 @@ function Navbar() {
 
   return (
 
-    <AppBar position="static">
+    <AppBar position="fixed">
       <CssBaseline />
       <Toolbar className={classes.navbar}>
         <Typography className={classes.logo}>
