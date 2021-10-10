@@ -6,6 +6,7 @@ import Contact from "./pages/contact";
 import Login from "./pages/login";
 import Dashboard from "./pages/dashboard";
 import Footer from "./component/Footer";
+import Profile from "./pages/profile";
 function App() {
   return (
     <Router>
@@ -15,6 +16,7 @@ function App() {
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/contact" component={Contact} />
         <Route path="/login" component={Login} />
+        <Route path="/profile" component={Profile} />
       </Switch>
       <Footer />
     </Router>
