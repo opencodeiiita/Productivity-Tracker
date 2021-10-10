@@ -7,7 +7,7 @@ router.get('/google', passport.authenticate('google',{
     scope:['profile', 'email']
 }));
 
-router.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: 'http://localhost:3000/login' }), (req, res)=> {
+router.get('/google/callback', passport.authenticate('google', { failureRedirect: 'http://localhost:3000/login' }), (req, res)=> {
     res.json({'Gid': req.user.gid, 
               'Email':req.user.email,
               'Name':req.user.name,
