@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
         bottom: 0,
         left: 0,
         right: 0,
-        backgroundColor: 'red',
+        backgroundColor: 'black',
     },
     navlinks: {
         marginLeft: theme.spacing(5),

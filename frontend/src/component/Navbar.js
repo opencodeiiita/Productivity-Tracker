@@ -13,7 +13,13 @@ import DrawerComponent from "./Drawer";
 
 const useStyles = makeStyles((theme) => ({
   navbar: {
-    backgroundColor: 'red'
+    position: 'fixed',
+
+    top: 0,
+    left: 0,
+    right: 0,
+    zindex: 1071,
+    backgroundColor: 'rgba(255, 255, 255, 0.7);'
   },
   navlinks: {
     marginLeft: theme.spacing(5),
@@ -25,8 +31,9 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     textDecoration: "none",
-    color: "white",
+    color: "black",
     fontSize: "20px",
+
     marginLeft: theme.spacing(5),
     "&:hover": {
       color: "orange",
@@ -42,12 +49,12 @@ function Navbar() {
 
   return (
 
-    <AppBar position="static">
+    <AppBar position="fixed">
       <CssBaseline />
-      <Toolbar className= {classes.navbar}>
-        <Typography  className={classes.logo}>
-        <Link to="/" style ={ {fontSize: "35px",textDecoration: "none", color: "orange" }}>
-          Productivity App
+      <Toolbar className={classes.navbar}>
+        <Typography className={classes.logo}>
+          <Link to="/" style={{ fontSize: "32px", textDecoration: "none", color: "Black", fontWeight: "600" }}>
+            Productivity App
           </Link>
         </Typography>
         {isMobile ? (

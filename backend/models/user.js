@@ -5,4 +5,5 @@ const userSchema = new mongoose.Schema({
   name: { type: String, required: true },
   photoUrl: { type: String, required: true },
 });
-mongoose.model('User', userSchema);
+const User = mongoose.model('user', userSchema);
+module.exports = User;
