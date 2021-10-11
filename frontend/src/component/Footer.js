@@ -13,7 +13,7 @@ import Instagram from '@material-ui/icons/Instagram';
 
 const useStyles = makeStyles((theme) => ({
     navbar: {
-        position: 'static',
+        position: 'fixed',
         bottom: 0,
         left: 0,
         right: 0,
