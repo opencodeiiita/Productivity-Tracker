@@ -1,6 +1,11 @@
 import { Typography } from "@material-ui/core";
-
+import Footer from '../component/Footer';
+import Navbar from '../component/Navbar';
 function Contact() {
-  return <Typography>Contact Us page</Typography>;
+  return(<>
+    <Navbar />
+   <Typography>Contact Us page</Typography>
+   <Footer />
+   </>);
 }
 export default Contact;

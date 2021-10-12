@@ -3,8 +3,12 @@ import Container from '@mui/material/Container';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import GoogleIcon from '../images/google.svg';
+import Navbar from '../component/Navbar'
+import Footer from '../component/Footer'
 function Login() {
   return (
+    <>
+      <Navbar />
     <Container align='center' sx={{ marginTop: 3 }}>
       <Typography variant='h4' sx={{ marginTop: 3 }}>
         Login page
@@ -22,6 +26,8 @@ function Login() {
         <Typography variant='string'> <a href="http://localhost:5000/auth/google">Sign In With Google</a> </Typography>
       </Button>
     </Container>
+    <Footer />
+      </>
   );
 }
 export default Login;

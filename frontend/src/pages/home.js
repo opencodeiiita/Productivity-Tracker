@@ -1,10 +1,13 @@
 import React from 'react';
 import Hero from '../component/Home Components/Hero';
 import Chart2 from '../component/Home Components/Chart2';
+import Navbar from '../component/Navbar'
+import Footer from '../component/Footer'
 
 function home() {
   return (
     <>
+        <Navbar />
       <Hero />
       <div
         style={{
@@ -19,6 +22,7 @@ function home() {
         }}
       >
         <Chart2 />
+        <Footer />
       </div>
     </>
   );
