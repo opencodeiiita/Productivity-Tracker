@@ -1,10 +1,6 @@
 const mongoose = require('mongoose');
 
 const taskSchema = new mongoose.Schema({
-    id: {
-        type:id, 
-        required: true
-    },
     user_id: { 
         type: mongoose.Schema.Types.ObjectId, 
         required: true, 
@@ -15,10 +11,10 @@ const taskSchema = new mongoose.Schema({
         required: true, 
     },
     times:[{
-        HH:Number,
-        MM:Number,
-        SS:Number,
-        required:true,
+        HH: Number,
+        MM: Number,
+        SS: Number,
+        required: true,
     }],
 },{ timestamps: true });
 
