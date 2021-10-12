@@ -14,7 +14,6 @@ const taskSchema = new mongoose.Schema({
         HH: Number,
         MM: Number,
         SS: Number,
-        required: true,
     }],
 },{ timestamps: true });
 
