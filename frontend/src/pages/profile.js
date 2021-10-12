@@ -4,8 +4,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Camera from "@material-ui/icons/Camera";
 import Palette from "@material-ui/icons/Palette";
 import Favorite from "@material-ui/icons/Favorite";
-
-
+import Navbar from '../component/Navbar'
+import Footer from '../component/Footer'
 import Button from "../component/Profile/CustomButtons/Button.js";
 import GridContainer from "../component/Profile/Grid/GridContainer.js";
 import GridItem from "../component/Profile/Grid/GridItem.js";
@@ -122,6 +122,8 @@ export default function Profile(props) {
     );
     const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
     return (
+        <>
+           <Navbar />
         <div >
             <Parallax
                 small
@@ -240,5 +242,7 @@ export default function Profile(props) {
                 </div>
             </div>
         </div>
+        <Footer />
+        </>
     );
 }

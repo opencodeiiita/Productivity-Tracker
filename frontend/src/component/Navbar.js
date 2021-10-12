@@ -48,8 +48,8 @@ function Navbar() {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-
-    <AppBar position="fixed">
+    <div>
+      <AppBar position="fixed">
       <CssBaseline />
       <Toolbar className={classes.navbar}>
         <Typography className={classes.logo}>
@@ -77,6 +77,8 @@ function Navbar() {
         )}
       </Toolbar>
     </AppBar>
+    </div>
+   
   );
 }
 export default Navbar;
