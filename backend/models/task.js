@@ -2,16 +2,13 @@ const mongoose = require('mongoose');
 
 const taskSchema = new mongoose.Schema({
     id: {
-        type:Number, 
+        type:id, 
         required: true
     },
-    user_id: {
-        type: String, 
-        required: true 
-    },
-    created_at:{
-        type: Date,
-        default: Date.now,
+    user_id: { 
+        type: mongoose.Schema.Types.ObjectId, 
+        required: true, 
+        ref: 'user' 
     },
     description: { 
         type: String, 
@@ -23,7 +20,7 @@ const taskSchema = new mongoose.Schema({
         SS:Number,
         required:true,
     }],
-});
+},{ timestamps: true });
 
 const Task = mongoose.model('task',taskSchema);
 
