@@ -1,144 +1,124 @@
-import * as React from 'react';
-import { styled, useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
-import CssBaseline from '@mui/material/CssBaseline';
-import MuiAppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import List from '@mui/material/List';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import { useState } from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import clsx from "clsx";
+import Drawer from "@material-ui/core/Drawer";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
+import IconButton from "@material-ui/core/IconButton";
+import MenuIcon from "@material-ui/icons/Menu";
+import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
+import Navbar from "./Navbar";
+import Footer from './Footer'
+import zIndex from "@mui/material/styles/zIndex";
+import { List } from "@mui/material";
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import ListAltIcon from '@mui/icons-material/ListAlt';
-import { makeStyles } from '@mui/styles';
 import NotesIcon from '@mui/icons-material/Notes';
 import EventIcon from '@mui/icons-material/Event';
 import TimerIcon from '@mui/icons-material/Timer';
 import QueryStatsIcon from '@mui/icons-material/QueryStats';
-import { Tooltip } from '@mui/material';
-import DashboardGraph from './DashboardGraph';
+import DashboardGraph from "./DashboardGraph";
 
-const drawerWidth = 200;
+const UseStyles = makeStyles({
+  root: {
+    textAlign: "center",
+    display: "flex",
+    flexDirection: "column",
+    minHeight: "100vh",
+    color: "#000133",
+  },
+  appBar: {
+    background: "#00022E",
+    color: "#FC86AA",
+  },
+  icon: {
+    padding: "10px",
+    zIndex:'100000'
+  },
+  title: {
+    margin: "auto",
+  },
+  container: {
+    display: "flex",
+    flex: 1,
+  },
+  drawer: {
+    background: "#D8DCD6",
+    position: "static",
+    transition: "width .7s",
+  },
+  closed: {
+    width: "0px",
+  },
+  opened: {
+    width: "240px",
+  },
+  main: {
+    flex: 1,
+    background: "#f7f5f5",
+    color: "black",
+  },
+  footer: {
+    background: "#00022E",
+    height: "50px",
+    color: "#FC86AA",
+  },
+  widthc:{
+    width:'80vw',
+    zIndex:'-5'
+  }
+});
 
-const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
-  ({ theme, open }) => ({
-    flexGrow: 1,
-    padding: theme.spacing(3),
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    marginLeft: `-${drawerWidth}px`,
-    ...(open && {
-      transition: theme.transitions.create('margin', {
-        easing: theme.transitions.easing.easeOut,
-        duration: theme.transitions.duration.enteringScreen,
-      }),
-      marginLeft: 0,
-    }),
-  }),
-);
 
-const AppBar = styled(MuiAppBar, {
-  shouldForwardProp: (prop) => prop !== 'open',
-})(({ theme, open }) => ({
-  transition: theme.transitions.create(['margin', 'width'], {
-    easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen,
-  }),
-  ...(open && {
-    width: `calc(100% - ${drawerWidth}px)`,
-    marginLeft: `${drawerWidth}px`,
-    transition: theme.transitions.create(['margin', 'width'], {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  }),
-}));
 
-const DrawerHeader = styled('div')(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
-  padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
-  ...theme.mixins.toolbar,
-  justifyContent: 'flex-end',
-}));
-
-const useStyle = makeStyles({
-   toolbar:{
-     position:'absolute',
-     top:'45px',
-    //  border:'2px solid red',
-     width:'100px',
-     height:'100px'
-     
-   }
-})
-
-export default function PersistentDrawerLeft() {
-  const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
-
-  const handleDrawerOpen = () => {
-    setOpen(true);
- 
-  };
-
-  const handleDrawerClose = () => {
-    setOpen(false);
-
-  };
-  const classes = useStyle();
-
+export default function PersistentDrawerLeft(props) {
+  // console.log(props);
+  const classes = UseStyles();
+  const [isOpened, setIsOpened] = useState(false);
+  const foropen = ()=>{
+    console.log(isOpened);
+    if(isOpened===false){
+      setIsOpened(true);
+      props.func();
+  
+    }
+    else{
+       setIsOpened(false);
+       props.func();
+      }
+      console.log(isOpened);
+  }
   return (
-    <Box sx={{ display: 'flex' }}>
-      <CssBaseline />
-      
-        <Toolbar className={classes.toolbar}>
-        <Tooltip title="Sidebar">
-        <IconButton
+    <div className={classes.root}>
+      <AppBar className={classes.appBar}>
+        <Toolbar>
+          <IconButton
             color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            edge="start"
-            sx={{ mr: 2, ...(open && { display: 'none' }) }}
+            onClick={foropen}
+            className={classes.icon}
           >
-            <MenuIcon />
+            {isOpened ? <ChevronLeftIcon /> : <MenuIcon />}
           </IconButton>
-         </Tooltip>
           
-          <Typography variant="h6" noWrap component="div">
-           
-          </Typography>
+            <Navbar className={classes.widthc} ></Navbar>
+         
         </Toolbar>
-   
-      <Drawer
-        sx={{
-          width: drawerWidth,
-          flexShrink: 0,
-          '& .MuiDrawer-paper': {
-            width: drawerWidth,
-            boxSizing: 'border-box',
-          },
-        }}
-        variant="persistent"
-        anchor="left"
-        open={open}
-      >
-        <DrawerHeader>
-          <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
-          </IconButton>
-        </DrawerHeader>
-        <Divider />
-        <List>
+      </AppBar>
+      <Toolbar />
+      <div className={classes.container}>
+        <Drawer
+          variant="permanent"
+          classes={{
+            paper: clsx(classes.drawer, {
+              [classes.closed]: !isOpened,
+              [classes.opened]: isOpened,
+            }),
+          }}
+        >
+         <List>
         <ListItem button key="notes" >
           <ListItemIcon color='primary'>
            <NotesIcon color='primary'></NotesIcon>
@@ -162,13 +142,14 @@ export default function PersistentDrawerLeft() {
           <ListItemText   primary="Stats" />
         </ListItem>
       </List>
-
-      </Drawer>
-      <Main open={open}>
-      {/* <DrawerHeader /> */}
-        <DashboardGraph></DashboardGraph>
-        
-      </Main>
-    </Box>
+        </Drawer>
+        <main className={classes.main}>
+          <DashboardGraph state={props.state} func={props.func}></DashboardGraph>
+        </main>
+      </div>
+      <div className={classes.footer}>
+        <Footer></Footer>
+      </div>
+    </div>
   );
 }

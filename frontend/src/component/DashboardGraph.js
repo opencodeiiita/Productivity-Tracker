@@ -84,7 +84,7 @@ console.log(c)
 console.log(d)
 const myStyle = makeStyles(
  { barDiv: {
-   width:`${d}vw`,
+   
    height:'90vh',
      display:'flex',
      margin:'0',
@@ -115,11 +115,11 @@ const myStyle = makeStyles(
 }
 )
 
-export default function DashboardGraph() {
+export default function DashboardGraph(props) {
     const clases = myStyle();
     return(
     <>
-      <div className={clases.barDiv}>
+      <div className={clases.barDiv} style={{width:`cal((100-${props.state}))vw`,}}>
        
       <Card className={clases.barCard}  >
       <h3 className={clases.dashStyle}>Dashboard</h3>

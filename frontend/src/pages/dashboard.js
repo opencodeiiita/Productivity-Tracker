@@ -3,11 +3,11 @@ import  PersistentDrawerLeft from "../component/PersistentDrawer"
 
 
 
-function Dashboard() {
+function Dashboard(props) {
 
   return(
   <>
-     <PersistentDrawerLeft />
+     <PersistentDrawerLeft state={props.state} func={props.func} />
     
    
      
