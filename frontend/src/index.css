@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 /*
 =============== 
 Variables
@@ -44,6 +46,7 @@ Variables
   --max-width: 1170px;
   --fixed-width: 620px;
 }
+
 /*
 =============== 
 Global Styles
@@ -52,7 +55,8 @@ Global Styles
 
 *,
 ::after,
-::before {
+::before`{
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -189,6 +193,7 @@ Hero Styles
 }
 
 .hero-info h1 {
+  font-family: 'Poppins', sans-serif;
   text-transform: none;
   max-width: 500px;
   margin-bottom: 2rem;
