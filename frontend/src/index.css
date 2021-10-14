@@ -55,7 +55,7 @@ Global Styles
 
 *,
 ::after,
-::before`{
+::before{
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
@@ -256,4 +256,215 @@ Hero Styles
   .app-img {
     width: 17rem;
   }
+}
+.main_div{
+  font-family: 'Josefin Sans', sans-serif;
+  width: 100%;
+  height: 100vh;
+  background: #6983aa;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.center_div{
+  margin-top: 80px;
+  width: 70%;
+  height: 80vh;
+  background-color: #f4f4f4;
+  box-shadow: 5px 5px 25px -5px rgba(0,0,0,0.5);
+  border-radius: 15px 15px 15px 15px;
+  overflow-y: scroll;
+}
+
+
+.todo-head{
+  color: #fff;
+  background: transparent;
+  background-color: #8566aa;
+  padding: 6px 0 2px 0;
+  margin-bottom: 10px;
+  box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.3);
+}
+.center_div::-webkit-scrollbar {
+  width: 8px;
+}
+
+.center_div::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+ 
+/* Handle */
+.center_div::-webkit-scrollbar-thumb {
+  background:darkgray;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.center_div::-webkit-scrollbar-thumb:hover {
+  background: #8566aa;
+}
+
+input{
+  text-align: center;
+  height: 30px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 500;
+  width: 60%;
+  border-bottom: 2px solid #8566aa;
+  outline: none;
+}
+
+button, #edit{
+  min-height: 33px;
+  min-width: 37px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #8566aa;
+  color: #fff;
+  font-size: 40px;
+  border: none;
+  outline: none;
+  margin-left: 10px;
+  box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.3);
+  
+}
+
+#edit{
+  font-size: 28px;
+  padding: 7px;
+}
+
+button:hover{
+  background-color: #20bf6b;
+}
+#edit:hover{
+  background-color: black;
+}
+
+ol{
+  margin-top: 30px;
+}
+
+.todo_style{
+  background-color: #ffccff;
+  padding: 10px;
+  margin-left: 40px;
+  margin-right: 40px;
+  border-radius: 20px;
+  margin: 20px;
+  margin-bottom: 15px;
+}
+
+ol ul{
+  width: 70%;
+  padding-left: 0px;
+  text-align: left;
+  font-weight: 500;
+  min-height: 40px;
+  align-items: center;
+  color: #8566aa;
+}
+
+.task{
+  margin-top: 10px;
+  font-size: 26px;
+  margin-bottom: px;
+}
+.created, .modified{
+  font-size: 15px;
+}
+
+.todo_style{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+
+.todo_style .fa-check{
+  width: 26px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8566aa;
+  border-radius: 50%;
+  margin: 0 20px 0 20px;
+  color: aliceblue;
+  box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.3);
+}
+
+.todo_style .fa-trash-o{
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8566aa;
+  border-radius: 50%;
+  margin: 0 20px 0 0px;
+  color: aliceblue;
+  box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.3);
+  left: 0;
+  position: relative;
+}
+.todo_style .fa-edit{
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8566aa;
+  border-radius: 50%;
+  margin: 0 20px 0 70px;
+  color: aliceblue;
+  box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.3);
+  left: 0;
+  position: relative;
+}
+
+.todo_style .fa-check:hover{
+  background-color: #20bf6b;
+}
+
+.todo_style .fa-trash-o:hover{
+  background-color: crimson;
+}
+
+.todo_style .fa-edit:hover{
+  background-color: black;
+}
+
+
+@media (max-width:768px) {
+  .center_div{
+    width: 55%;
+  }
+
+  button{
+    margin-left: 5px;
+    font-size: 30px;
+  }
+
+  .todo_style .fa-trash-o{
+    margin: 0 15px 0 15px;
+  }
+  .todo_style .fa-check{
+    margin: 0 0px 0 35px;
+  }
+  .todo_style .fa-edit{
+    margin: 0 0px 0 35px;
+  }
+}
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages/home';
@@ -7,6 +8,7 @@ import Dashboard from './pages/dashboard';
 import Profile from './pages/profile';
 import TimerComp from './pages/TimerComp';
 import { useState } from 'react';
+import Todo from "./component/Todo/todo";
 function App() {
   const [state, setstate] = useState('0');
   const func = () => {
@@ -24,7 +26,10 @@ function App() {
         <Route path="/contact" component={Contact} />
         <Route path="/login" component={Login} />
         <Route path="/profile" component={Profile} />
+
         <Route path="/timer" component={TimerComp} />
+         <Route path="/todo" component={Todo} />
+
       </Switch>
     </Router>
   );
