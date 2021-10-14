@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var passport = require('passport');
+const { getProfile } = require('../controllers/authController');
 
 /* Auth with google. */
 router.get('/google', passport.authenticate('google',{
@@ -15,7 +16,7 @@ router.get('/google/callback', passport.authenticate('google', { failureRedirect
   })
 });
 
-
+router.get('/profile/:gid', getProfile)
 
 
 module.exports = router;
