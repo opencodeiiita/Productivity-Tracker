@@ -6,6 +6,7 @@ import Login from "./pages/login";
 import Dashboard from "./pages/dashboard";
 import Profile from "./pages/profile";
 import { useState } from "react";
+import Todo from "./component/Todo/todo";
 function App() {
   const [state, setstate] = useState('0');
   const func =()=>{
@@ -23,6 +24,7 @@ function App() {
         <Route path="/contact" component={Contact} />
         <Route path="/login" component={Login} />
         <Route path="/profile" component={Profile} />
+        <Route path="/todo" component={Todo} />
       </Switch>
     
     </Router>
