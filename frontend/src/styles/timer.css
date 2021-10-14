@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+  font-family: 'Kumbh Sans', sans-serif;
+  margin: 0;
+}
+h1 {
+  font-weight: bold;
+  font-style: normal;
+  font-size: 100px;
+  line-height: 101px;
+  letter-spacing: -5px;
+  color: #d7e0ff;
+}
+h2 {
+  font-weight: bold;
+  font-style: normal;
+  font-size: 28px;
+  line-height: 34px;
+  color: #d7e0ff;
+}
+h3 {
+  font-weight: bold;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 15px;
+  color: #d7e0ff;
+  text-transform: uppercase;
+}
+h4 {
+  font-weight: bold;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 5px;
+  color: #d7e0ff;
+  text-transform: uppercase;
+}
+.page {
+  background: #1e213f;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.page .logo {
+  margin-top: 48px;
+  margin-bottom: 55px;
+}
+.page .settings-icon {
+  margin-top: 63px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 650px) {
+  .logo {
+    margin-top: 32px;
+    margin-bottom: 45px;
+  }
+}
