@@ -1,0 +1,32 @@
+
+.navlinks {
+    margin-left:5px;
+    display: "flex";
+    align-items: "center";
+    justify-content: "flex-start";
+}
+.logo {
+  font-size: 35px;
+  text-decoration: none;
+  color: orange;
+  transition: font-size 400ms;
+}
+.link{
+    text-decoration:none;
+    color:white;
+    font-size: 22.5px;
+    margin-left: 7px;
+    cursor: pointer;
+}
+.socLinks{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap:2px;
+}
+@media screen and (max-Width:600px){
+  .logo {
+    font-size: 25px;
+  }
+
+}
