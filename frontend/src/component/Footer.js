@@ -1,4 +1,5 @@
 import React from "react";
+import './Footer.css';
 import {
     AppBar,
     Toolbar,
@@ -10,34 +11,22 @@ import { Link } from "react-router-dom";
 import Facebook from '@material-ui/icons/Facebook';
 import Twitter from '@material-ui/icons/Twitter';
 import Instagram from '@material-ui/icons/Instagram';
-
 const useStyles = makeStyles((theme) => ({
     navbar: {
         position: 'fixed',
+        display:'flex',
+        justifyContent:'space-around',
         bottom: 0,
         left: 0,
         right: 0,
         backgroundColor: 'black',
     },
-    navlinks: {
-        marginLeft: theme.spacing(5),
-        display: "flex",
-        alignItems: "center",
-        justifyItems: "flex-start"
-    },
-    
     logo: {
         flexGrow: "1",
         cursor: "pointer",
     },
-    
-    link: {
-        textDecoration: "none",
-        color: "white",
-        fontSize: "22.5px",
-        marginLeft: theme.spacing(7),
-        cursor: "pointer"
-    },
+
+
 }));
 
 function Navbar() {
@@ -46,18 +35,18 @@ function Navbar() {
         <AppBar position="static">
             <CssBaseline />
             <Toolbar className={classes.navbar}>
-                <Typography className={classes.logo}>
-                    <Link to="/" style={{ fontSize: "35px", textDecoration: "none", color: "orange" }}>
+                    <a href="/" className="logo">
                         Productivity App
-                    </Link>
-                </Typography>
-                <div className={classes.navlinks}>
-                    <div className={classes.link}>
+                    </a>
+                <div className="navlinks">
+                    <div className="link">
                         &copy; 2021 Opencode
                     </div>
-                    <Facebook className={classes.link} />
-                    <Twitter className={classes.link} />
-                    <Instagram className={classes.link} />
+                    <div className="socLinks">
+                      <Facebook className={classes.link} />
+                      <Twitter className={classes.link} />
+                      <Instagram className={classes.link} />
+                    </div>
                 </div>
             </Toolbar>
         </AppBar>
