@@ -21,6 +21,8 @@ import EventIcon from '@mui/icons-material/Event';
 import TimerIcon from '@mui/icons-material/Timer';
 import QueryStatsIcon from '@mui/icons-material/QueryStats';
 import DashboardGraph from "./DashboardGraph";
+import Todo from "./Todo/todo";
+import { Link } from "react-router-dom";
 
 const UseStyles = makeStyles({
   root: {
@@ -125,10 +127,13 @@ export default function PersistentDrawerLeft(props) {
           </ListItemIcon>
           <ListItemText  primary="Notes" />
         </ListItem>
-        <ListItem button key="Todolist">
+        <Link to="/todo">
+          <ListItem button key="Todolist">
+
           <ListItemIcon><ListAltIcon color='primary'/></ListItemIcon>
           <ListItemText  primary="Todo List" />
         </ListItem>
+        </Link>
         <ListItem button key="reminder">
           <ListItemIcon> <EventIcon color='primary'/></ListItemIcon>
           <ListItemText  primary="Reminders" />

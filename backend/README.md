@@ -2,6 +2,9 @@
 
 Please follow the below guidelines while contributing to the backend of this project:
 
+Add /backend/config/keys.js file in the following format :
+`module.exports = { google : { clientId : '*****', clientSecret : '*****' }, session : { cookieKey : "somesecretsauce" } }`
+
 In this directory
 1. Run the following command `npm install`.
 2. Run the command `npm start`. The backend will be live on [localhost:5000](localhost:5000)
