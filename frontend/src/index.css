@@ -257,3 +257,9 @@ Hero Styles
     width: 17rem;
   }
 }
+body{
+  background-image:linear-gradient(to right, #33ccff 0%, #ff99cc 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
