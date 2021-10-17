@@ -3,12 +3,13 @@ import Hero from '../component/Home Components/Hero';
 import Chart2 from '../component/Home Components/Chart2';
 import Navbar from '../component/Navbar'
 import Footer from '../component/Footer'
-
+import DoughnutExample from '../component/Home Components/doughnutChart'
 function home() {
   return (
     <>
         <Navbar />
       <Hero />
+      <br />
       <div
         style={{
           textAlign: 'center',
@@ -22,6 +23,8 @@ function home() {
         }}
       >
         <Chart2 />
+        <br/>
+        <DoughnutExample />
         <Footer />
       </div>
     </>
