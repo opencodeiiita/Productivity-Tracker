@@ -1,0 +1,112 @@
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 410px;
+  height: 410px;
+  background: linear-gradient(315deg, #2e325a 0%, #0e112a 100%);
+  box-shadow: -50px -50px 100px #272c5a, 50px 50px 100px #121530;
+  border-radius: 50%;
+}
+.countdown-container .progress-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #161932;
+  border-radius: 50%;
+}
+.countdown-container .inside-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.countdown-container .inside-bar .remaining-time {
+  margin-top: 139px;
+  text-align: center;
+}
+.countdown-container .inside-bar .remaining-time.font-Kumbh {
+  font-family: 'Kumbh Sans';
+  line-height: 101px;
+  letter-spacing: -5px;
+}
+.countdown-container .inside-bar .remaining-time.font-Roboto {
+  font-family: 'Roboto Slab';
+  margin-top: 105px;
+  line-height: 132px;
+  letter-spacing: normal;
+}
+.countdown-container .inside-bar .remaining-time.font-Space {
+  font-family: 'Space Mono';
+  line-height: 148px;
+  letter-spacing: -10px;
+  margin-top: 98px;
+  font-weight: normal;
+}
+.countdown-container .inside-bar h3 {
+  cursor: pointer;
+  margin-top: 0px;
+  height: 20px;
+  line-height: 54px;
+  text-align: center;
+}
+.countdown-container .inside-bar h3.font-Kumbh {
+  font-family: 'Kumbh Sans';
+  line-height: 16px;
+  margin-top: 19px;
+}
+.countdown-container .inside-bar h3.font-Roboto {
+  font-family: 'Roboto Slab';
+  line-height: 21px;
+  margin-top: 20px;
+}
+.countdown-container .inside-bar h3.font-Space {
+  font-family: 'Space Mono';
+  line-height: 24px;
+  margin-top: 10px;
+}
+@media only screen and (max-width: 475px) {
+  .countdown-container {
+    width: 300px;
+    height: 300px;
+  }
+  .countdown-container .inside-bar .remaining-time {
+    font-size: 80px;
+    margin-top: 95.9px;
+    line-height: 80px;
+    height: 80px;
+  }
+  .countdown-container .inside-bar .remaining-time.font-Roboto {
+    margin-top: 90px;
+    height: 80px;
+    line-height: 80px;
+  }
+  .countdown-container .inside-bar .remaining-time.font-Space {
+    height: 80px;
+    line-height: 80px;
+    margin-top: 95px;
+    width: 210px;
+    text-align: center;
+  }
+  .countdown-container .inside-bar h3 {
+    font-size: 14px;
+  }
+  .countdown-container .inside-bar h3.font-Kumbh {
+    font-family: 'Kumbh Sans';
+    line-height: 14px;
+    margin-top: 14px;
+  }
+  .countdown-container .inside-bar h3.font-Roboto {
+    font-family: 'Roboto Slab';
+    line-height: 21px;
+    margin-top: 20px;
+  }
+  .countdown-container .inside-bar h3.font-Space {
+    font-family: 'Space Mono';
+    line-height: 24px;
+    margin-top: 10px;
+  }
+}

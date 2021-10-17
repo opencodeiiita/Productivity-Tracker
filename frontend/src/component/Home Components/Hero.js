@@ -7,9 +7,9 @@ const Hero = () => {
     <div>
     <section className="hero">
       <div className="hero-center">
-        <article className="hero-info">
+        <div className="hero-info">
           <h1>
-            Productivity <br />
+            Productivity <br/>
             Tracker
           </h1>
           <p>
@@ -21,15 +21,15 @@ const Hero = () => {
           <Button variant="contained" style={{ backgroundColor: 'red' }} href={'#sign-up'}>
             Sign Up!
           </Button>
-        </article>
-        <article className="hero-images">
+        </div>
+        <div className="hero-images">
           <img
             src={DailyActivities}
             className="phone-img"
             alt="daily Activities"
             style={{ maxWidth: '55vw' }}
           />
-        </article>
+        </div>
       </div>
       </section>
       <div className = "Todo">
