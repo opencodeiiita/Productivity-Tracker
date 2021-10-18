@@ -84,7 +84,7 @@ const Todo = () => {
       <div className="main_div">
         <div className="center_div">
           <br />
-          <h1 className="todo-head"> ToDo List </h1>
+          <h2 className="todo-head"> ToDo List </h2>
           <br />
           <input
             type="text"
@@ -121,7 +121,7 @@ const Todo = () => {
                               editItems(index);
                           }}><EditIcon/>
                       </span>
-                      <span className="fa-trash-o"
+                      <span className="fa-trash-o" 
                           onClick={()=>{
                               deleteItems(index);
                           }}>
