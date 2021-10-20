@@ -3,7 +3,6 @@ var router = express.Router();
 
 const { getProfile } = require('../controllers/authController');
 const ToDo = require('../models/todo');
-const User = require('../models/user');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -14,9 +13,8 @@ router.get('/profile', getProfile)
 
 router.post('/todo',async(req,res)=>{
   try{
-    const user = await User.findOne({email : req.user.email})
     const todo = new ToDo({
-      user_id: user._id,
+      user_id: req.user._id,
       description: req.body.description,
       checked: req.body.checked,
     })
