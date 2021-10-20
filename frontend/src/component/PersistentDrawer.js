@@ -129,7 +129,6 @@ export default function PersistentDrawerLeft(props) {
         </ListItem>
         <Link to="/todo">
           <ListItem button key="Todolist">
-
           <ListItemIcon><ListAltIcon color='primary'/></ListItemIcon>
           <ListItemText  primary="Todo List" />
         </ListItem>
@@ -138,10 +137,12 @@ export default function PersistentDrawerLeft(props) {
           <ListItemIcon> <EventIcon color='primary'/></ListItemIcon>
           <ListItemText  primary="Reminders" />
         </ListItem>
+        <Link to="/timer">
         <ListItem button key="Stopwatch">
           <ListItemIcon><TimerIcon color='primary'/></ListItemIcon>
-          <ListItemText  primary="StopWatch" />
+          <ListItemText  primary="Timer" />
         </ListItem>
+        </Link>
         <ListItem button key="Stats">
           <ListItemIcon><QueryStatsIcon color='primary'/></ListItemIcon>
           <ListItemText   primary="Stats" />

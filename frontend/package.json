@@ -21,6 +21,8 @@
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
+    "react-web-notification": "^0.8.0",
+    "react-web-notifications": "^1.2.4",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

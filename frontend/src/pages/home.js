@@ -25,8 +25,8 @@ function home() {
         <Chart2 />
         <br/>
         <DoughnutExample />
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 }
