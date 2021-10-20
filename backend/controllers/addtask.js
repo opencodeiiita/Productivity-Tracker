@@ -1,4 +1,5 @@
 const Task = require('../models/task')
+const User = require('../models/user')
 /*
 ============================
 ********Task***************
@@ -7,7 +8,10 @@ const Task = require('../models/task')
 
 exports.addtask = async(req, res)=>{
     try{
-        const {_id, description, times} =req.body;
+        // const user = await User.findOne(_id);
+        
+        const user_id = req.user._id;
+        const {description, times} =req.body;
 
         if(!(_id&&description&&times)){
 
@@ -24,7 +28,7 @@ exports.addtask = async(req, res)=>{
             });}
         }
         const newTask = new Task({
-            user_id:_id,
+            user_id:user_id,
             description:description,
             times:times
         })
