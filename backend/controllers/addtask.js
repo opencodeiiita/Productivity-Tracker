@@ -1,5 +1,4 @@
 const Task = require('../models/task')
-const User = require('../models/user')
 /*
 ============================
 ********Task***************
@@ -8,7 +7,6 @@ const User = require('../models/user')
 
 exports.addtask = async(req, res)=>{
     try{
-        console.log(req.User);
         const {_id, description, times} =req.body;
 
         if(!(_id&&description&&times)){
