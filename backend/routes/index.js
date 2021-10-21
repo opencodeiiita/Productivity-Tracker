@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-
+const {addtask} = require('../controllers/addtask');
 const { getProfile } = require('../controllers/authController');
 const ToDo = require('../models/todo');
 
@@ -12,7 +12,7 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/profile', getProfile);
-
+router.post('/task', addtask);
 router.post('/note', async (req, res) => {
     try {
         const note = new Note({
