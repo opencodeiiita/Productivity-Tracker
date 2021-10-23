@@ -19,6 +19,8 @@ module.exports = {
 
 In place of ***********, add Get Google Client ID and Google Client Secret obtained in the above step
 
+Also make sure that mongoDB is installed and running PORT 27017
+
 In this directory
 1. Run the following command `npm install`.
 2. Run the command `npm start`. The backend will be live on [localhost:5000](localhost:5000)
