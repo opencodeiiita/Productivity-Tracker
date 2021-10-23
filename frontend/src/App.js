@@ -9,6 +9,8 @@ import Profile from './pages/profile';
 import TimerComp from './pages/TimerComp';
 import { useState } from 'react';
 import Todo from "./component/Todo/todo";
+import Notes from './component/Notes/Notes';
+
 function App() {
   const [state, setstate] = useState('0');
   const func = () => {
@@ -29,6 +31,7 @@ function App() {
 
         <Route path="/timer" component={TimerComp} />
          <Route path="/todo" component={Todo} />
+         <Route path="/notes" component={Notes} />
 
       </Switch>
     </Router>
