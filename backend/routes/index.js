@@ -5,7 +5,6 @@ const { getProfile } = require('../controllers/authController');
 const ToDo = require('../models/todo');
 
 const Note = require('../models/note');
-
 /* GET home page. */
 router.get('/', function (req, res, next) {
     res.json({ msg: 'Hello World' });
@@ -16,14 +15,13 @@ router.post('/task', addtask);
 router.post('/note', async (req, res) => {
     try {
         const note = new Note({
-            user_id: req.user._id,
             title: req.body.title,
             text: req.body.text,
         });
         const createdNote = await note.save();
         res.send({ Note: createdNote });
     } catch (err) {
-        res.send({ message: 'Note could not be created' });
+      res.send({ message: 'Note could not be created' });
     }
 });
 
@@ -38,6 +36,22 @@ router.post('/todo',async(req,res)=>{
     res.send({Todo: createdTodo});
   }catch(err){
     res.send({message: "Todo not created"})
+  }
+})
+
+router.get('/todo',async(req,res)=>{
+  try{
+    if(!req.user){
+      res.status(404).json({
+        error: 'You need to be logged in'
+      })
+    }
+    const todo = await ToDo.find({'user_id': req.user._id})
+    res.status(200).json({Todo: todo});
+  }catch(err){
+    res.status(400).json(
+      {Success:false,
+      error: err})
   }
 })
 
