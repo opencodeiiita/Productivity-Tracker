@@ -3,7 +3,6 @@ var router = express.Router();
 const {addtask} = require('../controllers/addtask');
 const { getProfile, getNote } = require('../controllers/authController');
 const ToDo = require('../models/todo');
-
 const Note = require('../models/note');
 
 /* GET home page. */
@@ -13,6 +12,7 @@ router.get('/', function (req, res, next) {
 
 router.get('/profile', getProfile);
 router.get('/note', getNote)
+router.get('/task', getTask);
 router.post('/task', addtask);
 router.post('/note', async (req, res) => {
     try {
