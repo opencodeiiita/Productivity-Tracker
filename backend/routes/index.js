@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const {addtask} = require('../controllers/addtask');
-const { getProfile } = require('../controllers/authController');
+const { getProfile, getNote } = require('../controllers/authController');
 const ToDo = require('../models/todo');
 
 const Note = require('../models/note');
@@ -12,9 +12,11 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/profile', getProfile);
+router.get('/note', getNote)
 router.post('/task', addtask);
 router.post('/note', async (req, res) => {
     try {
+       console.log('ashuytosh')
         const note = new Note({
             user_id: req.user._id,
             title: req.body.title,
