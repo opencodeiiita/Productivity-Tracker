@@ -15,6 +15,7 @@ router.post('/task', addtask);
 router.post('/note', async (req, res) => {
     try {
         const note = new Note({
+            user_id: req.user._id,
             title: req.body.title,
             text: req.body.text,
         });
