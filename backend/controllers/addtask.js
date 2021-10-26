@@ -47,3 +47,25 @@ exports.addtask = async(req, res)=>{
       })
     }
 }
+
+exports.getTask = async(req,res) => {
+    try{
+        if(!(req.user)){
+            return res.status(401).json({
+                success:'false',
+                error:"User is not authenticated💀💀💀"
+            })
+        }
+        const tasks = await Task.find({'user_id': req.user._id})
+        return res.status(200).json({
+            success:true,
+            tasks: tasks
+        })
+    }
+    catch (err){
+      return res.status(404).json({
+          success:false,
+          mssg: err
+      })
+    }
+}
