@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const {addtask} = require('../controllers/addtask');
+const {addtask, getTask} = require('../controllers/addtask');
 const { getProfile, getNote } = require('../controllers/authController');
 const ToDo = require('../models/todo');
 const Note = require('../models/note');
