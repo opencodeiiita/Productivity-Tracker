@@ -20,7 +20,12 @@ exports.getProfile = async(req,res) => {
 
 exports.getNote = async(req, res)=>{
     try{
-       const user_id = req.body._id;
+     if(!req.user){
+      res.status(404).json({
+        error: 'You need to be logged in'
+      })
+    }
+       const user_id = req.user._id;
        Note.find({user_id:user_id}).then((data)=>{
         
         return res.status(200).json({
