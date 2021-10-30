@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import classNames from "classnames";
 import { makeStyles } from "@material-ui/core/styles";
 import Camera from "@material-ui/icons/Camera";
@@ -120,7 +121,14 @@ export default function Profile(props) {
         classes.imgRoundedCircle,
         classes.imgFluid
     );
+    const [profileData, setprofileData] = useState({})
     const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
+    useEffect(() => {
+         axios.get('/profile').then((res)=>{
+             setprofileData(res);
+         }
+         )
+    }, [])
     return (
         <>
            <Navbar />
@@ -138,10 +146,10 @@ export default function Profile(props) {
                             <GridItem xs={12} sm={12} md={6}>
                                 <div className={classes.profile}>
                                     <div>
-                                        <img src={profile} alt="..." className={imageClasses} />
+                                        <img src={profileData.photoURL} alt="..." className={imageClasses} />
                                     </div>
                                     <div className={classes.name}>
-                                        <h3 className={classes.title}>Christian Louboutin</h3>
+                                        <h3 className={classes.title}>{profileData.name}</h3>
                                         <h6>DESIGNER</h6>
                                         <Button justIcon link className={classes.margin5}>
                                             <i className={"fab fa-twitter"} />
