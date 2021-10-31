@@ -145,7 +145,7 @@ function App() {
                     />
                 </div>
                 <div className="timeDiv">
-                    <div className="timeText"> End Time</div>
+                    <div className="timeText">End Time</div>
                     <input
                         id="txtInput"
                         type="time"
