@@ -1,0 +1,51 @@
+/* .MuiOutlinedInput-root {
+    color: white;
+}
+.MuiOutlinedInput-root {
+    border-color: #ccc;
+    color: #ccc;
+} */
+#txtInput {
+    -webkit-appearance: none;
+    margin-top: 30px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    border-radius: 40px;
+    font-size: 18px;
+    border: 2px solid orchid;
+    color: orchid;
+    background: none;
+    height: 40px;
+    width: 500px;
+    margin: 0;
+    transition: 0.3s;
+    box-shadow: inset 0 0 0 none;
+    text-align: start;
+}
+::-webkit-input-placeholder {
+    color: lightpink;
+}
+
+#txtInput:hover {
+    color: #fff;
+    box-sizing: border-box;
+    border: 2px solid orchid;
+    background: orchid;
+}
+#txtInput:focus {
+    background: orchid;
+    border: 2px solid orchid;
+    color: #fff;
+}
+.timeDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 500px;
+    padding: 0 10px;
+}
+.timeText {
+    color: lightpink;
+    font-size: 18px;
+}

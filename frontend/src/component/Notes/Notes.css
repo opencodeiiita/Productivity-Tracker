@@ -1,0 +1,12 @@
+.note{
+   background-color: hsl(210deg 36% 96%);
+}
+
+input,textarea{
+    margin-left: 20px;
+}
+
+.title,.description,.time{
+    margin-left: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

@@ -2,8 +2,24 @@
 
 Please follow the below guidelines while contributing to the backend of this project:
 
+Get Google Client ID and Google Client Secret by solving [Issue #13](https://github.com/opencodeiiita/Productivity-Tracker/issues/13) first
+
 Add /backend/config/keys.js file in the following format :
-`module.exports = { google : { clientId : '*****', clientSecret : '*****' }, session : { cookieKey : "somesecretsauce" } }`
+`
+module.exports = {
+    google : {
+        clientId : '***********',
+        clientSecret : '***********'
+    },
+    session : {
+        cookieKey : "somesecretsauce"
+    }
+}
+`
+
+In place of ***********, add Get Google Client ID and Google Client Secret obtained in the above step
+
+Also make sure that mongoDB is installed and running PORT 27017
 
 In this directory
 1. Run the following command `npm install`.

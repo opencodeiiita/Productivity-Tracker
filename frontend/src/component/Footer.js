@@ -13,7 +13,7 @@ import Twitter from '@material-ui/icons/Twitter';
 import Instagram from '@material-ui/icons/Instagram';
 const useStyles = makeStyles((theme) => ({
     navbar: {
-        position: 'fixed',
+        position: 'relative',
         display:'flex',
         justifyContent:'space-around',
         bottom: 0,
