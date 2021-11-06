@@ -1,6 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
+  "proxy": "http://127.0.0.1:5000",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.4.1",
@@ -16,6 +17,7 @@
     "antd": "^4.16.13",
     "chart.js": "^3.5.1",
     "classnames": "^2.3.1",
+    "axios": "^0.21.4",
     "react": "^17.0.2",
     "react-chartjs-2": "^3.0.5",
     "react-customizable-progressbar": "^1.0.3",

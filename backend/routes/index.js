@@ -58,4 +58,18 @@ router.get('/todo',async(req,res)=>{
   }
 })
 
+router.post('/todo',async(req,res)=>{
+  try{
+    const todo = new ToDo({
+      user_id: req.user._id,
+      description: req.body.description,
+      checked: req.body.checked,
+    })
+    const createdTodo = await todo.save();
+    res.send({Todo: createdTodo});
+  }catch(err){
+    res.send({message: "Todo not created"})
+  }
+})
+
 module.exports = router;
